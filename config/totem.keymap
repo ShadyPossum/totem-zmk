@@ -123,7 +123,7 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
             &kp Q         &kp W         &kp F            &kp P            &kp B              &kp J         &kp L              &kp U            &kp Y         &kp APOS 
             &hml LCTRL A  &hml LALT R   &hml LGUI S      &hml LSHFT T     &kp G              &kp M         &hmr RSHFT N       &hmr RGUI E      &hmr LALT I   &hmr RCTRL O
 &kp TAB    &kp Z         &kp X         &hml MEH C       &hml HYP D       &kp V              &kp K         &hmr HYP H         &hmr_meh MEH 0   &dot_morph    &kp FSLH      &kp TAB
-                                        &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT       &kp RET       &lt NUM BSPC       &lt FUN DEL
+                                        ___     ___    &sk LSHFT       &kp RET       ___       ___
             >;
         };
         /*nav_layer { 
