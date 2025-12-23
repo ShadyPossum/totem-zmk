@@ -16,10 +16,10 @@
 #define ___ &trans
 
 #define BASE 0
-#define NAV 1
-#define NUM 2
-#define FUN 3
-#define UTIL 4
+/#define NAV 1
+//#define NUM 2
+//#define FUN 3
+//#define UTIL 4
 
 // navigation bindings for back/forward and prev tab/next tab
 #define BACK &kp LC(LBKT)
@@ -126,7 +126,7 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
                                         &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT       &kp RET       &lt NUM BSPC       &lt FUN DEL
             >;
         };
-        nav_layer { 
+        /*nav_layer { 
             bindings = <
             ___          ___          ___             ___             ___                &kp INS       &kp HOME          &kp UP          &kp END       &kp PAGE_UP 
             &kp LCTRL     &kp LALT     &kp LGUI       &kp LSHFT       ___                ___           &kp LEFT          &kp DOWN        &kp RIGHT     &kp PAGE_DOWN
@@ -157,7 +157,7 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
 &kp LBKT     ___          ___          ___             &kp HYP        ___                ___           ___               ___             ___           ___             &kp RBKT
                                       ___             ___             ___                ___           ___               &kp C_MUTE
             >;
-        };
+        }; */
     };
 };
     
