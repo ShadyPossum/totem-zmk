@@ -20,6 +20,7 @@
 #define NUM 2
 #define FUN 3
 #define UTIL 4
+#define GAME 5
 
 // navigation bindings for back/forward and prev tab/next tab
 #define BACK &kp LC(LBKT)
@@ -118,11 +119,11 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
     };
     keymap {
         compatible = "zmk,keymap";
-        default_layer { // ColemakDHm
+        default_layer {
             bindings = <
             &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
             &hml LCTRL A  &hml LALT S   &hml LGUI D      &hml LSHFT F     &kp G              &kp H         &hmr RSHFT J       &hmr RGUI K      &hmr LALT L   &hmr RCTRL 0
- &kp TAB    &kp Z         &kp X         &hml MEH C       &hml HYP V       &kp B              &kp N         &hmr HYP M         &comma_morph     &dot_morph    &kp FSLH      &kp TAB
+ &kp TAB    &kp Z         &kp X         &hml MEH C       &hml HYP V       &kp B              &kp N         &hmr HYP M         &comma_morph     &dot_morph    &kp FSLH      &to GAME
                                         &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT          &kp RET       &lt NUM BSPC       &lt FUN DEL
             >;
         };
@@ -157,7 +158,15 @@ ___    ___           ___          &kp MEH         &kp HYP         ___           
 &kp LBKT     ___          ___          ___             &kp HYP        ___                ___           ___               ___             ___           ___             &kp RBKT
                                       ___             ___             ___                ___           ___               &kp C_MUTE
             >;
-        }; 
+        };
+        gaming_layer {
+            bindings = <
+            &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
+            &kp A         &kp S         &kp D            &kp F            &kp G              &kp H         &kp J              &kp K            &kp L         &kp SEMI
+ &kp TAB    &kp Z         &kp X         &kp C            &kp V            &kp B              &kp N         &kp M              &kp COMMA        &kp DOT       &kp FSLH      &to BASE
+                                        &kp ESC          &kp SPACE        &kp LSHFT          &kp RET       &kp BSPC           &kp DEL
+            >;
+        };
     };
 };
     
