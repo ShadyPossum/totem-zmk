@@ -11,18 +11,18 @@
         ;
 };
 
-&pro_micro_i2c {
+&i2c0 {
     status = "okay";
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
         reg = <0x3c>;
         width = <128>;
-        height = <32>;  // or 64, depending on your display
+        height = <64>;
         segment-offset = <0>;
         page-offset = <0>;
         display-offset = <0>;
-        multiplex-ratio = <31>;  // 31 for 32px height, 63 for 64px
+        multiplex-ratio = <63>;
         prechargep = <0x22>;
     };
 };
