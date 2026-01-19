@@ -1,5 +1,9 @@
 #include "totem.dtsi"
 
+&kscan0 {
+    status = "disabled";
+};
+
 / {
     chosen {
         zephyr,display = &oled;
