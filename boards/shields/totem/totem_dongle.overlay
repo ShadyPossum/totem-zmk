@@ -10,8 +10,10 @@
         ;
 };
 
-&chosen {
-    zephyr,display = &oled;
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
 };
 
 &i2c0 {
