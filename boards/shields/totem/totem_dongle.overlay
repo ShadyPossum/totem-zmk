@@ -2,7 +2,6 @@
 
 &kscan0 {
     // Use dummy pins that don't conflict with I2C (D4/D5)
-    // These won't actually be used since dongle receives input via BLE
     col-gpios
         = <&xiao_d 6 GPIO_ACTIVE_HIGH>
         , <&xiao_d 7 GPIO_ACTIVE_HIGH>
@@ -10,26 +9,4 @@
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
         , <&xiao_d 10 GPIO_ACTIVE_HIGH>
         ;
-};
-
-/ {
-    chosen {
-        zephyr,display = &oled;
-    };
-};
-
-&i2c0 {
-    status = "okay";
-    
-    oled: ssd1306@3c {
-        compatible = "solomon,ssd1306fb";
-        reg = <0x3c>;
-        width = <128>;
-        height = <64>;
-        segment-offset = <0>;
-        page-offset = <0>;
-        display-offset = <0>;
-        multiplex-ratio = <63>;
-        prechargep = <0x22>;
-    };
 };
