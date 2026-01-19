@@ -1,10 +1,5 @@
 #include "totem.dtsi"
 
-/ {
-    chosen {
-        zephyr,display = &oled;
-    };
-};
 
 &kscan0 {
     col-gpios
@@ -14,6 +9,13 @@
         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
         , <&xiao_d 8 GPIO_ACTIVE_HIGH>
         ;
+};
+
+#if defined(SHIELD_TOTEM_DONGLE)
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
 };
 
 &i2c0 {
@@ -31,3 +33,4 @@
         prechargep = <0x22>;
     };
 };
+#endif
