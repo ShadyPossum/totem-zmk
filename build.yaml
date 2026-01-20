@@ -20,7 +20,7 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: totem_dongle dongle_display
+    shield: totem_dongle
   - board: seeeduino_xiao_ble
     shield: totem_left
   - board: seeeduino_xiao_ble
