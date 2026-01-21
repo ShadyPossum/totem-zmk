@@ -2,11 +2,21 @@
 
 / {
     chosen {
+        /delete-property/ zmk,kscan;        // Remove the kscan reference from totem.dtsi
+        zmk,kscan = &mock_kscan;            // Add our mock kscan instead
         zephyr,display = &oled;
+    };
+    
+    // Create a mock kscan with no keys
+    mock_kscan: mock_kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
     };
 };
 
-// Remove or comment out the kscan - dongle doesn't scan keys
+// Disable the real kscan inherited from totem.dtsi
 &kscan0 {
     status = "disabled";
 };
