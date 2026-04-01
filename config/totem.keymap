@@ -116,6 +116,14 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
             bindings = <&kp QMARK>, <&kp EXCL>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        // sticky shift - caps lock
+        tdcaps: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHFT>, <&caps_word>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
@@ -125,7 +133,7 @@ MAKE_HRM(hmr_meh, &kp, &comma_morph, KEYS_L THUMBS)
             &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
             &hml LCTRL A  &hml LALT S   &hml LGUI D      &hml LSHFT F     &kp G              &kp H         &hmr RSHFT J       &hmr RGUI K      &hmr LALT L   &hmr RCTRL APOS
  &kp TAB    &kp Z         &kp X         &hml MEH C       &hml HYP V       &kp B              &kp N         &hmr HYP M         &comma_morph     &dot_morph    &kp FSLH      &to GAME
-                                        &lt UTIL ESC     &lt NAV SPACE    &sk LSHFT          &kp RET       &lt NUM BSPC       &lt FUN DEL
+                                        &lt UTIL ESC     &lt NAV SPACE    &tdcaps          &kp RET       &lt NUM BSPC       &lt FUN DEL
             >;
         };
         nav_layer { 
@@ -167,9 +175,9 @@ ___    ___           ___          &kp MEH         &kp HYP         ___           
         gaming_layer {
             display-name = "Gaming";
             bindings = <
-            &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
-            &kp A         &kp S         &kp D            &kp F            &kp G              &kp H         &kp J              &kp K            &kp L         &kp SEMI
- &kp TAB    &kp Z         &kp X         &kp C            &kp V            &kp B              &kp N         &kp M              &kp COMMA        &kp DOT       &kp FSLH      &to BASE
+            &kp TAB       &kp Q         &kp W         &kp E            &kp R            &kp T              &kp Y         &kp U              &kp I            &kp O         &kp P 
+            &kp LSHFT     &kp A         &kp S         &kp D            &kp F            &kp G              &kp H         &kp J              &kp K            &kp L         &kp SEMI
+ &kp ESC    &kp LCTRL     &kp Z         &kp X         &kp C            &kp V            &kp B              &kp N         &kp M              &kp COMMA        &kp DOT       &kp FSLH      &to BASE
                                         &kp ESC          &kp SPACE        &kp LSHFT          &kp RET       &kp BSPC           &kp DEL
             >;
         };
